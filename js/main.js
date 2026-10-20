@@ -1,4 +1,4 @@
-/* Nodex Solar EV — interacciones */
+/* Nodex Charging Solutions — interacciones */
 (() => {
 'use strict';
 
@@ -451,7 +451,7 @@ let waRubro = '';
 $$('.picker-chips button').forEach(b => b.addEventListener('click', () => { waRubro = b.textContent.trim(); }));
 function waUrl() {
   const lines = [
-    'Hola Nodex Solar! Vi la página de cargadores para autos eléctricos con energía solar.',
+    'Hola Nodex Charging Solutions! Vi la página de cargadores para autos eléctricos con energía solar.',
     'Quiero poner un cargador en mi lugar para ganar con la venta de energía, ahorrar con solar y traer clientes nuevos.',
     waRubro && `Mi rubro: ${waRubro}.`,
     '¿Me pueden asesorar y pasar una cotización?'

@@ -1,6 +1,6 @@
-# Nodex Solar EV · Cargadores de autos eléctricos + energía solar
+# Nodex Charging Solutions · Cargadores de autos eléctricos + energía solar
 
-Sitio estático (HTML + CSS + JS, sin build) que presenta la unidad de negocio de cargadores de autos eléctricos con energía solar de Nodex Solar: packs cerrados, cobro por QR, simulador de potencia contratada y calculadora de rentabilidad.
+Sitio estático (HTML + CSS + JS, sin build) que presenta la unidad de negocio de cargadores de autos eléctricos con energía solar de Nodex: packs cerrados, cobro por QR, simulador de potencia contratada y calculadora de rentabilidad.
 
 ## Qué incluye
 - **Simulador de potencia**: reparte el día hora por hora entre consumo del local, solar y carga de autos, y muestra cómo el gestor dinámico evita superar la potencia contratada.
@@ -15,7 +15,7 @@ Todo está al principio de [`js/main.js`](js/main.js), en el objeto `CONFIG`:
 
 | Campo | Qué es |
 |---|---|
-| `whatsapp` | Número de WhatsApp con código de país (sin `+`). **Hoy es un placeholder.** |
+| `whatsapp` | Número de WhatsApp con código de país (sin `+`). Hoy: 54 9 11 7643-8672. Lo usan el botón flotante y el formulario. |
 | `priceArsPerKwh` | Tarifa de ejemplo de la demo de cobro |
 | `graceMin`, `overstayArsPerMin` | Minutos de gracia y tarifa de ocupación de ejemplo |
 
