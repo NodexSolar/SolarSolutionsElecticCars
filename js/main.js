@@ -4,7 +4,7 @@
 
 /* ======== CONFIGURACIÓN (editar acá) ======== */
 const CONFIG = {
-  whatsapp: '5491100000000',   // número con código de país, sin + ni espacios
+  whatsapp: '5491176438672',   // número con código de país, sin + ni espacios (54 9 11 7643-8672)
   priceArsPerKwh: 520,         // tarifa de ejemplo en la demo de cobro (ARS por kWh)
   graceMin: 10,                // minutos de gracia en la demo
   overstayArsPerMin: 60,       // tarifa de ocupación de ejemplo
@@ -388,6 +388,7 @@ function runRoi() {
   const net = gross - energy - fees;
   const pb = net > 0 && inv > 0 ? inv / net : null;
   const extra = sesM * conv * ticket;
+  const saving = kwhM * solar * Math.max(0, grid - SOLAR_COST);
   const usd = n => 'USD ' + nf(n);
   const pct = n => Math.max(2, Math.min(100, gross ? n / gross * 100 : 0));
 
@@ -400,6 +401,7 @@ function runRoi() {
       <div><span>Facturación mensual</span><b>${usd(gross)}</b></div>
       <div class="neg"><span>− Costo de energía (red + solar)</span><b>${usd(energy)}</b></div>
       <div class="neg"><span>− Comisiones de cobro y plataforma</span><b>${usd(fees)}</b></div>
+      <div class="pos"><span>Ahorro por usar tu propia energía solar (ya incluido)</span><b>${usd(saving)}</b></div>
       <div class="pos"><span>= Margen neto por mes</span><b>${usd(net)}</b></div>
       <div class="pos"><span>Margen neto por año</span><b>${usd(net * 12)}</b></div>
       <div><span>Clientes nuevos por mes (sesiones)</span><b>${nf(sesM)}</b></div>
@@ -443,33 +445,26 @@ if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: re
 }
 
 /* ======================================================
-   PANEL DEL PROPIETARIO (datos ilustrativos)
+   WHATSAPP (botón flotante y enlaces)
    ====================================================== */
-const chs = [
-  { n: 'Cargador 01', st: 'Cargando', kw: 10.2, pct: 64 },
-  { n: 'Cargador 02', st: 'Cargando', kw: 7.1, pct: 38 },
-  { n: 'Cargador 03', st: 'Libre', kw: 0, pct: 0, cls: 'free' },
-  { n: 'Cargador 04', st: 'Ocupado sin cargar · 14 min', kw: 0, pct: 100, cls: 'warn' }
-];
-let dKwh = 186, dMoney = 96700;
-function drawDash() {
-  $('#dCh').innerHTML = chs.map(c => `<div class="ch ${c.cls || ''}"><div><b>${c.n}</b><span class="st">${c.st}</span></div><div class="bar2"><i style="width:${c.pct}%"></i></div><span class="kw">${nf(c.kw, 1)} kW</span></div>`).join('');
-  $('#dKwh').textContent = nf(dKwh) + ' kWh';
-  $('#dMoney').textContent = '$ ' + nf(dMoney);
+let waRubro = '';
+$$('.picker-chips button').forEach(b => b.addEventListener('click', () => { waRubro = b.textContent.trim(); }));
+function waUrl() {
+  const lines = [
+    'Hola Nodex Solar! Vi la página de cargadores para autos eléctricos con energía solar.',
+    'Quiero poner un cargador en mi lugar para ganar con la venta de energía, ahorrar con solar y traer clientes nuevos.',
+    waRubro && `Mi rubro: ${waRubro}.`,
+    '¿Me pueden asesorar y pasar una cotización?'
+  ].filter(Boolean);
+  return `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(lines.join(' '))}`;
 }
-drawDash();
-if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
-  setInterval(() => {
-    chs.slice(0, 2).forEach(c => {
-      c.kw = Math.max(6, Math.min(11, c.kw + (Math.random() - .5) * 1.2));
-      c.pct = Math.min(100, c.pct + 1.4);
-      if (c.pct >= 100) c.pct = 8;
-    });
-    const inc = (chs[0].kw + chs[1].kw) / 3600 * 3;
-    dKwh += inc; dMoney += inc * CONFIG.priceArsPerKwh;
-    drawDash();
-  }, 3000);
-}
+$$('[data-wa]').forEach(a => {
+  a.href = waUrl(); a.target = '_blank'; a.rel = 'noopener';
+  a.addEventListener('click', () => { a.href = waUrl(); });
+});
+const waFloat = $('#waFloat');
+const showWa = () => waFloat.classList.toggle('show', scrollY > 500);
+addEventListener('scroll', showWa, { passive: true }); showWa();
 
 /* ======================================================
    CONTACTO
