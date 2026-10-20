@@ -28,7 +28,7 @@ $$('#menu a').forEach(a => a.addEventListener('click', () => {
 }));
 
 /* ======== aparición al hacer scroll ======== */
-const rvEls = $$('.sec-head, .card, .pack, .node, .gallery figure, .qa, .split > *, .coverage, .sim-ctrl, .chart-card, .roi-in, .phone');
+const rvEls = $$('.sec-head, .card, .pack, .node, .gallery figure, .qa, .split > *, .coverage, .sim-ctrl, .chart-card, .roi-in, .phone, .photo-tall, .hw figure, .dash, .tariffs, .scan, .stats > div');
 rvEls.forEach(el => el.classList.add('rv'));
 if ('IntersectionObserver' in window) {
   const io = new IntersectionObserver(es => es.forEach(e => {
@@ -170,11 +170,14 @@ function drawChart(d) {
 
 function drawKpis(d) {
   const share = d.evDel > 0 ? d.solEv / d.evDel * 100 : 0;
+  // nafta: 0,23 kg CO2/km; energía de red: ~0,3 kg CO2/kWh; la solar se toma como cero
+  const co2 = Math.max(0, (d.evDel * CONFIG.kmPerKwh * 0.23 - (d.evDel - d.solEv) * 0.3) * 365 / 1000);
   const k = [
     { c: 'good', v: nf(d.evDel), u: ' kWh', l: `entregados a autos por día · ≈ ${nf(d.evDel * CONFIG.kmPerKwh)} km de autonomía` },
     { c: share >= 40 ? 'good' : '', v: nf(share), u: ' %', l: 'de esa carga sale de tus paneles solares' },
     { c: d.peak > d.Pc ? 'warn' : '', v: nf(d.peak), u: ' kW', l: `pico de red · límite contratado ${nf(d.Pc)} kW` },
-    { c: d.hrsNo > 0 ? 'warn' : 'good', v: nf(d.hrsNo, 1), u: ' h', l: 'por día por encima de lo contratado si NO hubiera gestor' }
+    { c: d.hrsNo > 0 ? 'warn' : 'good', v: nf(d.hrsNo, 1), u: ' h', l: 'por día por encima de lo contratado si NO hubiera gestor' },
+    { c: 'good', v: nf(co2, 1), u: ' t', l: 'de CO₂ evitadas por año frente a autos nafteros (estimación)' }
   ];
   sim.kpis.innerHTML = k.map(o => `<div class="kpi ${o.c}"><b>${o.v}<small>${o.u}</small></b><span>${o.l}</span></div>`).join('');
 }
@@ -412,6 +415,61 @@ function runRoi() {
 }
 $$('.roi-in input, .roi-in select').forEach(el => el.addEventListener('input', runRoi));
 runRoi();
+
+/* ======================================================
+   SELECTOR DE RUBRO (hero) y CONTADORES
+   ====================================================== */
+$$('.picker-chips button').forEach(b => b.addEventListener('click', () => {
+  sim.seg.value = b.dataset.seg;
+  runSim();
+  $('#simulador').scrollIntoView({ behavior: 'smooth' });
+}));
+
+const counters = $$('[data-count]');
+const runCounter = el => {
+  const to = +el.dataset.count, t0 = performance.now();
+  const tick = now => {
+    const p = Math.min(1, (now - t0) / 1100);
+    el.textContent = Math.round(to * (1 - Math.pow(1 - p, 3)));
+    if (p < 1) requestAnimationFrame(tick);
+  };
+  requestAnimationFrame(tick);
+};
+if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const co = new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting) { runCounter(e.target); co.unobserve(e.target); }
+  }), { threshold: .6 });
+  counters.forEach(c => co.observe(c));
+}
+
+/* ======================================================
+   PANEL DEL PROPIETARIO (datos ilustrativos)
+   ====================================================== */
+const chs = [
+  { n: 'Cargador 01', st: 'Cargando', kw: 10.2, pct: 64 },
+  { n: 'Cargador 02', st: 'Cargando', kw: 7.1, pct: 38 },
+  { n: 'Cargador 03', st: 'Libre', kw: 0, pct: 0, cls: 'free' },
+  { n: 'Cargador 04', st: 'Ocupado sin cargar · 14 min', kw: 0, pct: 100, cls: 'warn' }
+];
+let dKwh = 186, dMoney = 96700;
+function drawDash() {
+  $('#dCh').innerHTML = chs.map(c => `<div class="ch ${c.cls || ''}"><div><b>${c.n}</b><span class="st">${c.st}</span></div><div class="bar2"><i style="width:${c.pct}%"></i></div><span class="kw">${nf(c.kw, 1)} kW</span></div>`).join('');
+  $('#dKwh').textContent = nf(dKwh) + ' kWh';
+  $('#dMoney').textContent = '$ ' + nf(dMoney);
+}
+drawDash();
+if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  setInterval(() => {
+    chs.slice(0, 2).forEach(c => {
+      c.kw = Math.max(6, Math.min(11, c.kw + (Math.random() - .5) * 1.2));
+      c.pct = Math.min(100, c.pct + 1.4);
+      if (c.pct >= 100) c.pct = 8;
+    });
+    const inc = (chs[0].kw + chs[1].kw) / 3600 * 3;
+    dKwh += inc; dMoney += inc * CONFIG.priceArsPerKwh;
+    drawDash();
+  }, 3000);
+}
 
 /* ======================================================
    CONTACTO
