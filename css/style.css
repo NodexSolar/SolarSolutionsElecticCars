@@ -1,4 +1,4 @@
-/* Nodex Charging Solutions — estilos */
+/* Nodex E-Mobility — estilos */
 :root{
   --sol:#C8881A; --sol-lt:#E8A835; --sol-vivid:#EF9F27; --sol-pale:#FDF3E0;
   --forest:#0F1F10; --forest2:#152815; --forest3:#1E3720;
@@ -56,8 +56,8 @@ h3{font-size:30px}
 .hero{padding:64px 0 80px;background:radial-gradient(900px 500px at 85% 15%,rgba(239,159,39,.16),transparent 60%),radial-gradient(700px 500px at 0% 100%,rgba(91,227,138,.08),transparent 60%),var(--forest)}
 .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
 .cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
-.hero-photo{position:relative;margin:0;border-radius:26px;overflow:hidden;aspect-ratio:4/5;box-shadow:0 40px 80px -30px rgba(0,0,0,.7);border:1px solid rgba(255,255,255,.1)}
-.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 70%}
+.hero-photo{position:relative;margin:0;border-radius:26px;overflow:hidden;aspect-ratio:1/1;box-shadow:0 40px 80px -30px rgba(0,0,0,.7);border:1px solid rgba(255,255,255,.1)}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 50%}
 .chip{position:absolute;left:16px;right:16px;bottom:16px;display:flex;align-items:center;justify-content:center;gap:8px;background:rgba(15,31,16,.82);backdrop-filter:blur(8px);color:#fff;border:1px solid rgba(255,255,255,.15);padding:10px 14px;border-radius:999px;font-size:13px}
 .chip i{font-style:normal;color:var(--sol-vivid)}
 
@@ -80,17 +80,17 @@ h3{font-size:30px}
 
 /* ganás / ahorrás / clientes */
 .band{padding:80px 0;background:linear-gradient(rgba(15,31,16,.78),rgba(15,31,16,.86)),url("../assets/carport-modulos-bifaciales.jpg") center/cover}
-.three{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+.three{display:grid;grid-template-columns:repeat(4,1fr);gap:32px}
 .three>div{border-top:2px solid var(--sol-vivid);padding-top:22px}
 .three h3{font-size:clamp(40px,5vw,60px);font-weight:300;color:var(--sol-lt);margin-bottom:10px}
 .three p{font-size:18px;max-width:26ch;opacity:.88}
 
 /* sistema */
-.feat{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.feat{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
 .feat figure{margin:0}
-.feat .ph{aspect-ratio:4/4.4}
+.feat .ph{aspect-ratio:4/5}
 .feat figcaption{margin-top:16px}
-.feat figcaption b{display:block;font-family:var(--serif);font-weight:400;font-size:26px;color:var(--text);margin-bottom:4px}
+.feat figcaption b{display:block;font-family:var(--serif);font-weight:400;font-size:24px;line-height:1.1;color:var(--text);margin-bottom:4px}
 .checks{list-style:none;display:flex;flex-wrap:wrap;gap:10px;margin-top:40px}
 .checks li{background:#fff;border:1px solid rgba(26,26,18,.12);border-radius:999px;padding:10px 18px 10px 40px;font-size:15px;position:relative}
 .checks li::before{content:"";position:absolute;left:14px;top:50%;translate:0 -50%;width:18px;height:18px;border-radius:50%;background:var(--sol-pale) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Cpath d='M5 9.5l2.6 2.6L13 6.6' fill='none' stroke='%23C8881A' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat}
@@ -160,3 +160,18 @@ h3{font-size:30px}
   .wa-float{padding:14px}
   .brand b{letter-spacing:.22em}
 }
+
+/* foto ancha */
+section.wide{padding:56px 0 64px;background:#fff}
+.wide-photo{position:relative;margin:0 auto;width:min(1120px,100% - 40px);border-radius:var(--r);overflow:hidden;aspect-ratio:3/2;max-height:620px}
+.wide-photo img{width:100%;height:100%;object-fit:cover}
+.wide-photo figcaption{position:absolute;left:0;right:0;bottom:0;padding:70px 28px 24px;font-family:var(--serif);font-size:clamp(24px,3.4vw,40px);font-weight:300;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.72))}
+@media (max-width:1040px){.three{grid-template-columns:repeat(2,1fr)}.feat{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:900px){
+  .feat{gap:18px}
+  .feat .ph{aspect-ratio:1/1.1}
+  .feat figcaption{font-size:14px}
+  .feat figcaption b{font-size:21px}
+  .wide-photo{aspect-ratio:4/3}
+}
+@media (max-width:560px){.three{grid-template-columns:1fr 1fr;gap:22px}.three p{font-size:15px}}

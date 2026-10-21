@@ -1,9 +1,9 @@
-# Nodex Charging Solutions
+# Nodex E-Mobility
 
 Página estática (HTML + CSS + JS, sin build) para ofrecer cargadores de autos eléctricos y carport solar a empresas con estacionamiento: hoteles, restaurantes, tiendas, shoppings, supermercados, parques industriales y oficinas.
 
 ## Estructura
-Hero → rubros → cómo funciona (3 pasos) → ganás / ahorrás / atraés clientes → el sistema → packs → contacto.
+Hero → rubros → cómo funciona (3 pasos) → ingresos / ahorro / más clientes / fidelidad → el sistema → packs → contacto.
 
 ## Qué configurar
 Al principio de [`js/main.js`](js/main.js), objeto `CONFIG`:
