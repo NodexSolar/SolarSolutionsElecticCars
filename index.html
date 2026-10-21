@@ -3,482 +3,188 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Nodex Charging Solutions · Cargadores de autos eléctricos + energía solar</title>
-<meta name="description" content="Poné un cargador de autos eléctricos en tu hotel, restaurante, supermercado, cochera, parque industrial o estación de servicio: ganás con cada kWh, ahorrás con energía solar y traés clientes nuevos. Packs llave en mano en toda la Argentina.">
+<title>Nodex Charging Solutions · Cargadores eléctricos y carport solar para tu estacionamiento</title>
+<meta name="description" content="Sumá cargadores para autos eléctricos y un carport solar a tu estacionamiento: ganás con cada carga, ahorrás energía y atraés clientes. Para hoteles, restaurantes, tiendas, shoppings, supermercados, parques industriales y oficinas de toda la Argentina.">
 <meta name="theme-color" content="#0F1F10">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Nodex Charging Solutions · Un cargador de autos eléctricos que te hace ganar plata">
-<meta property="og:description" content="Ganás con cada kWh, ahorrás con energía solar y traés clientes nuevos. Packs llave en mano para comercios y empresas de toda la Argentina.">
+<meta property="og:title" content="Nodex Charging Solutions · Tu estacionamiento puede atraer clientes y generar plata">
+<meta property="og:description" content="Cargadores para autos eléctricos + carport solar, instalados y cobrando por QR. Para empresas con estacionamiento.">
 <meta property="og:image" content="assets/auto-cargando-bajo-carport.jpg">
 <link rel="icon" type="image/png" href="assets/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<header class="nav" id="top">
+<header class="nav">
   <div class="wrap nav-in">
     <a class="brand" href="#top" aria-label="Nodex Charging Solutions">
       <img src="assets/logo.png" alt="" width="34" height="34">
       <span><b>NODEX</b><i>Charging Solutions</i></span>
     </a>
-    <nav id="menu" aria-label="Principal">
-      <a href="#ganancia">Cómo ganás</a>
-      <a href="#simulador">Simulador</a>
-      <a href="#cobro">Cobro por QR</a>
-      <a href="#packs">Packs</a>
-      <a href="#negocio">Rentabilidad</a>
-      <a href="#faq">Preguntas</a>
-      <a class="btn btn-sm" href="#contacto">Cotizar</a>
-    </nav>
-    <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
+    <a class="btn btn-sm" data-wa href="#contacto">Cotizar</a>
   </div>
 </header>
 
-<main>
+<main id="top">
 
 <!-- HERO -->
 <section class="hero dark">
   <div class="wrap hero-grid">
-    <div class="hero-copy">
-      <p class="eyebrow"><span class="dot"></span> Cargadores de autos eléctricos + energía solar · Toda la Argentina</p>
-      <h1>Poné un cargador de autos eléctricos y <em>ganá plata</em> con cada kWh.</h1>
-      <p class="lead">Sumale paneles solares y además <strong>ahorrás energía</strong> y <strong>traés clientes nuevos</strong> a tu lugar. Pack completo, instalado y funcionando. El cliente paga por QR antes de cargar.</p>
-      <ul class="triad">
-        <li><i>$</i><b>Ganás</b><span>por cada kWh que vendés</span></li>
-        <li><i>☀</i><b>Ahorrás</b><span>con tu propia energía solar</span></li>
-        <li><i>＋</i><b>Traés clientes</b><span>que hoy no te visitan</span></li>
-      </ul>
+    <div>
+      <p class="eyebrow"><span class="dot"></span> Para empresas con estacionamiento</p>
+      <h1>Tu estacionamiento puede <em>atraer clientes</em> y generar plata.</h1>
+      <p class="lead">Cargadores para autos eléctricos y carport solar. Instalados, funcionando y cobrando por QR.</p>
       <div class="cta-row">
-        <a class="btn" href="#negocio">Calcular cuánto ganaría</a>
-        <a class="btn btn-ghost" href="#packs">Ver los packs</a>
-      </div>
-      <div class="picker">
-        <p>Elegí tu rubro y mirá tu simulación:</p>
-        <div class="picker-chips" role="group" aria-label="Rubro">
-          <button type="button" data-seg="hotel">Hotel</button>
-          <button type="button" data-seg="resto">Restaurante</button>
-          <button type="button" data-seg="super">Supermercado</button>
-          <button type="button" data-seg="industria">Parque industrial</button>
-          <button type="button" data-seg="cochera">Cochera / edificio</button>
-          <button type="button" data-seg="estacion">Estación de servicio</button>
-        </div>
+        <a class="btn" data-wa href="#contacto">Cotizar por WhatsApp</a>
+        <a class="btn btn-ghost" href="#como">Ver cómo funciona</a>
       </div>
     </div>
     <figure class="hero-photo">
-      <img src="assets/auto-cargando-bajo-carport.jpg" alt="Auto eléctrico cargando bajo un carport solar con cargadores de pared al fondo" width="900" height="1600" fetchpriority="high">
-      <figcaption class="chip c1"><i>☀</i> Carport con módulos bifaciales</figcaption>
-      <figcaption class="chip c2"><i>⚡</i> Instalación real · Zona Norte, Buenos Aires</figcaption>
+      <img src="assets/auto-cargando-bajo-carport.jpg" alt="Auto eléctrico cargando bajo un carport solar" width="900" height="1600" fetchpriority="high">
+      <figcaption class="chip"><i>⚡</i> Instalación real · Buenos Aires</figcaption>
     </figure>
   </div>
 </section>
 
-<!-- GANANCIA / AHORRO / CLIENTES -->
-<section class="light" id="ganancia">
+<!-- PARA QUIÉN -->
+<section class="light tight" id="rubros">
   <div class="wrap">
-    <div class="sec-head">
-      <p class="eyebrow dk">01 · Cómo te conviene</p>
-      <h2>Un cargador que se paga solo. Con solar, <em>además</em> ahorrás y atraés clientes.</h2>
+    <h2 class="h-sm">Si tenés estacionamiento, esto es para vos.</h2>
+    <div class="tiles">
+      <button type="button" data-rubro="Hotel"><i>🏨</i>Hoteles</button>
+      <button type="button" data-rubro="Restaurante / comida rápida"><i>🍔</i>Restaurantes y comida rápida</button>
+      <button type="button" data-rubro="Tienda"><i>👕</i>Tiendas</button>
+      <button type="button" data-rubro="Shopping"><i>🛍️</i>Shoppings</button>
+      <button type="button" data-rubro="Supermercado"><i>🛒</i>Supermercados</button>
+      <button type="button" data-rubro="Parque industrial"><i>🏭</i>Parques industriales</button>
+      <button type="button" data-rubro="Oficinas"><i>🏢</i>Oficinas</button>
+      <button type="button" data-rubro="Estación de servicio / cochera"><i>⛽</i>Estaciones y cocheras</button>
     </div>
-    <div class="opp">
-      <figure class="photo-tall">
-        <img src="assets/suv-cargando-totem.jpg" alt="Auto eléctrico blanco cargando en una plaza de estacionamiento con un cargador tipo totem al fondo" loading="lazy" width="900" height="1351">
-        <figcaption>Cada plaza con cargador es una razón más para elegir tu lugar.</figcaption>
+  </div>
+</section>
+
+<!-- CÓMO FUNCIONA -->
+<section class="white" id="como">
+  <div class="wrap">
+    <h2>Así de simple.</h2>
+    <div class="steps">
+      <article>
+        <div class="ph"><img src="assets/carport-cargadores-inversor.jpg" alt="Carport solar con cargadores, inversor y tablero" loading="lazy" width="900" height="1600" style="object-position:50% 60%"></div>
+        <span class="n">1</span>
+        <h3>Instalamos</h3>
+        <p>Carport con paneles solares y cargadores, conectados a tu tablero.</p>
+      </article>
+      <article>
+        <div class="ph"><img src="assets/qr-en-cargador.jpg" alt="Cargador con un código QR pegado en el frente" loading="lazy" width="361" height="461"></div>
+        <span class="n">2</span>
+        <h3>Tu cliente escanea y paga</h3>
+        <p>QR en el cargador. Paga por adelantado con su billetera. Sin app.</p>
+      </article>
+      <article>
+        <div class="ph"><img src="assets/suv-cargando-totem.jpg" alt="Auto eléctrico cargando en un estacionamiento" loading="lazy" width="900" height="1351" style="object-position:50% 65%"></div>
+        <span class="n">3</span>
+        <h3>Carga y consume en tu local</h3>
+        <p>Mientras su auto carga, él está en tu hotel, tu mesa o tu tienda.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- QUÉ GANÁS -->
+<section class="band dark">
+  <div class="wrap">
+    <div class="three">
+      <div><h3>Ganás</h3><p>Cobrás cada kWh que cargan, por adelantado.</p></div>
+      <div><h3>Ahorrás</h3><p>Los paneles generan tu energía y bajás tu factura de luz.</p></div>
+      <div><h3>Atraés clientes</h3><p>Se quedan más tiempo, vuelven, y te eligen primero.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- EL SISTEMA -->
+<section class="light" id="sistema">
+  <div class="wrap">
+    <h2>Todo resuelto.</h2>
+    <div class="feat">
+      <figure>
+        <div class="ph ph-grey"><img src="assets/cargador-ac-pantalla-rfid-qr.png" alt="Cargador de pared con pantalla, lector RFID y código QR" loading="lazy" width="242" height="466"></div>
+        <figcaption><b>Cargadores certificados</b>Con pantalla, QR y tarjeta.</figcaption>
       </figure>
-      <div class="three">
-        <article class="big3">
-          <span class="tagline">1 · Ganás</span>
-          <h3>Vendés energía y cobrás por adelantado.</h3>
-          <p>Cada kWh se vende con margen. El cliente paga por QR antes de cargar: sin caja, sin cobranzas.</p>
-          <p class="ex">Ejemplo: 8 cargas por día de 18 kWh ≈ <b>USD 900 netos por mes</b>.</p>
-        </article>
-        <article class="big3">
-          <span class="tagline">2 · Ahorrás</span>
-          <h3>Con paneles, parte de la energía es tuya.</h3>
-          <p>Un kWh solar cuesta una fracción del de la red. Cada kWh que no comprás es plata que queda en tu bolsillo, y el margen del cargador crece.</p>
-          <p class="ex">Ejemplo: 20 kWp generan ≈ 2.500 kWh por mes: <b>unos USD 275 menos en tu factura</b>.</p>
-        </article>
-        <article class="big3">
-          <span class="tagline">3 · Traés clientes</span>
-          <h3>El conductor eléctrico elige donde puede cargar.</h3>
-          <p>Cargar lleva entre 45 y 120 minutos: tiempo dentro de tu hotel, restaurante o súper. Más visitas, más consumo, más reservas.</p>
-          <p class="ex">Ejemplo: 240 clientes nuevos por mes ≈ <b>USD 2.160 en ventas extra</b>.</p>
-        </article>
-        <div class="cta-pair">
-          <a class="btn btn-sm" href="#negocio">Hacer mi cuenta</a>
-          <a class="link-arrow" href="#packs">Ver los packs →</a>
-        </div>
-      </div>
-    </div>
-    <p class="note">Ejemplos con los supuestos de la calculadora de rentabilidad (más abajo). No son una promesa de rendimiento.</p>
-  </div>
-</section>
-
-<!-- SISTEMA -->
-<section class="white" id="sistema">
-  <div class="wrap">
-    <div class="sec-head">
-      <p class="eyebrow dk">02 · El sistema</p>
-      <h2>Todo resuelto, ya funcionando.</h2>
-      <p class="sub">Diseñamos, instalamos, conectamos y operamos el conjunto. Vos ponés el lugar.</p>
-    </div>
-
-    <div class="flow" aria-label="Diagrama del sistema">
-      <div class="node n-sun"><i>☀</i><b>Paneles solares</b><span>Carport o techo</span></div>
-      <div class="arrow" aria-hidden="true"></div>
-      <div class="node"><i>⚙</i><b>Inversor</b><span>Conectado a tu tablero</span></div>
-      <div class="arrow" aria-hidden="true"></div>
-      <div class="node n-key"><i>⚖</i><b>Gestor de carga</b><span>Cuida tu potencia contratada</span></div>
-      <div class="arrow" aria-hidden="true"></div>
-      <div class="node"><i>⚡</i><b>Cargadores</b><span>AC 7–22 kW · DC rápido</span></div>
-      <div class="arrow" aria-hidden="true"></div>
-      <div class="node"><i>▦</i><b>Cobro por QR</b><span>Pago anticipado</span></div>
-    </div>
-
-    <div class="split">
-      <div class="split-photo">
-        <img src="assets/carport-cargadores-inversor.jpg" alt="Carport solar con cargadores, inversor y tablero de protección montados en estructura metálica" loading="lazy" width="900" height="1600">
-        <span class="cap">Instalación real: carport, inversor y cargadores en un solo conjunto.</span>
-      </div>
-      <div class="split-text">
-        <h3>Qué incluye</h3>
-        <ul class="ticks">
-          <li><b>Paneles solares</b> en techo o carport. Con carport además das sombra: el cliente deja el auto ahí con gusto.</li>
-          <li><b>Cargadores certificados</b> para los conectores más usados en Argentina, con protecciones y cartelería.</li>
-          <li><b>Gestión de potencia</b>: un medidor en tu acometida regula la carga para no pasarte de la energía contratada.</li>
-          <li><b>Plataforma de cobro y panel</b>: QR, tarjeta o app, tarifas a tu gusto y liquidación al propietario.</li>
-          <li><b>Monitoreo 24/7</b> y mantenimiento remoto, con proyecto eléctrico según AEA 90364.</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SIMULADOR -->
-<section class="dark" id="simulador">
-  <div class="wrap">
-    <div class="sec-head">
-      <p class="eyebrow">03 · Sin pasarte de la potencia contratada</p>
-      <h2>Más cargadores, <em>sin pasarte</em> de la energía que tenés contratada.</h2>
-      <p class="sub">Elegí tu rubro y tus números. El gestor reparte la potencia entre tu local, el sol y los autos, y recorta la carga solo lo necesario para que la red nunca supere el límite.</p>
-    </div>
-
-    <div class="sim">
-      <form class="sim-ctrl" id="simForm" onsubmit="return false">
-        <label>Rubro
-          <select id="sSeg">
-            <option value="super">Supermercado / shopping</option>
-            <option value="hotel">Hotel</option>
-            <option value="resto">Restaurante / café</option>
-            <option value="industria">Parque industrial / empresa</option>
-            <option value="cochera">Cochera / edificio / country</option>
-            <option value="estacion">Estación de servicio / ruta</option>
-          </select>
-        </label>
-        <label>Potencia contratada <output id="oPc"></output>
-          <input id="sPc" type="range" min="10" max="400" step="5" value="60">
-        </label>
-        <label>Consumo pico de tu local <output id="oBase"></output>
-          <input id="sBase" type="range" min="5" max="300" step="5" value="45">
-        </label>
-        <label>Paneles solares <output id="oSolar"></output>
-          <input id="sSolar" type="range" min="0" max="200" step="5" value="20">
-        </label>
-        <label>Cantidad de cargadores <output id="oN"></output>
-          <input id="sN" type="range" min="1" max="16" step="1" value="4">
-        </label>
-        <label>Potencia por cargador
-          <select id="sCh">
-            <option value="7.4">7,4 kW (monofásico)</option>
-            <option value="11" selected>11 kW (trifásico)</option>
-            <option value="22">22 kW (trifásico)</option>
-            <option value="60">60 kW (DC rápido)</option>
-          </select>
-        </label>
-        <label>Época del año
-          <select id="sSeason">
-            <option value="verano">Verano</option>
-            <option value="media" selected>Otoño / primavera</option>
-            <option value="invierno">Invierno</option>
-          </select>
-        </label>
-        <label class="switch"><input id="sMgr" type="checkbox" checked><span class="sw"></span> Gestor de carga dinámico</label>
-      </form>
-
-      <div class="sim-out">
-        <div class="chart-card">
-          <div class="chart-top">
-            <h3 id="simTitle">Un día típico</h3>
-            <div class="legend" aria-hidden="true">
-              <span><i class="lg base"></i>Tu local</span>
-              <span><i class="lg ev"></i>Carga de autos</span>
-              <span><i class="lg sol"></i>Solar</span>
-              <span><i class="lg grid"></i>Red</span>
-              <span><i class="lg pc"></i>Contratada</span>
-            </div>
-          </div>
-          <div class="chart-wrap">
-            <svg id="chart" viewBox="0 0 900 380" role="img" aria-label="Gráfico de potencia durante 24 horas"></svg>
-            <div class="tip" id="tip" hidden></div>
-          </div>
-          <p class="verdict" id="verdict" role="status"></p>
-        </div>
-        <div class="kpis" id="kpis"></div>
-        <p class="note">Simulación ilustrativa con perfiles tipo por rubro. En cada proyecto real se mide la curva de tu acometida.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- COBRO -->
-<section class="light" id="cobro">
-  <div class="wrap">
-    <div class="sec-head">
-      <p class="eyebrow dk">04 · Cobro y rotación</p>
-      <h2>Escaneá, pagá los kWh que querés y cargá.</h2>
-      <p class="sub">Sin app obligatoria ni registro. El cliente paga por adelantado con el QR de su billetera y el cargador se activa solo. Lo que no usa, se le devuelve.</p>
-    </div>
-
-    <div class="pay">
-      <div class="steps" id="payAside">
-        <figure class="scan">
-          <img src="assets/qr-en-cargador.jpg" alt="Cargador con un código QR pegado en el frente y el conector enchufable" loading="lazy" width="361" height="461">
-          <figcaption><b>El QR va pegado en cada cargador.</b> Se escanea con la cámara del celular, sin instalar nada.</figcaption>
-        </figure>
-        <ol>
-          <li data-s="0"><b>Escanea el QR</b> pegado en el cargador.</li>
-          <li data-s="1"><b>Elige cuántos kWh</b> (10, 20, 50…) y ve el precio antes de pagar.</li>
-          <li data-s="2"><b>Paga</b> con Mercado Pago, MODO, Cuenta DNI, bancos con QR interoperable o tarjeta.</li>
-          <li data-s="3"><b>Carga</b>: el pago activa el conector y se detiene al llegar a los kWh comprados.</li>
-          <li data-s="4"><b>Libera el lugar</b>: aviso al celular y minutos de gracia antes de la tarifa de ocupación.</li>
-        </ol>
-        <div class="pay-ctrl">
-          <button class="btn btn-sm" id="payPrev" type="button">← Atrás</button>
-          <button class="btn btn-sm" id="payNext" type="button">Siguiente →</button>
-          <button class="btn btn-sm btn-ghost-dk" id="payPlay" type="button">▶ Ver demo completa</button>
-        </div>
-      </div>
-
-      <div class="phone-wrap">
-        <div class="phone" aria-label="Demostración de la pantalla de pago en el celular">
-          <div class="notch"></div>
-          <div class="screen" id="screen"></div>
-        </div>
-        <p class="phone-cap">Demostración interactiva · tarifa de ejemplo</p>
-      </div>
-    </div>
-
-    <div class="rot-strip">
-      <h3>Y para que no dejen el auto ocupando el lugar</h3>
-      <ul>
-        <li><b>Pagan solo lo que cargan</b>El cargador corta al llegar al límite comprado.</li>
-        <li><b>Tarifa de ocupación</b>Con 10 minutos de gracia, informada antes de pagar.</li>
-        <li><b>Avisos al celular</b>Al terminar y antes de que empiece la tarifa.</li>
-        <li><b>Carga bonificada con ticket</b>Cargan mientras consumen en tu local.</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- COMPATIBILIDAD -->
-<section class="white" id="compatibilidad">
-  <div class="wrap">
-    <div class="sec-head">
-      <p class="eyebrow dk">05 · Compatibilidad</p>
-      <h2>Para los autos eléctricos que ya circulan en Argentina.</h2>
-    </div>
-    <div class="hw">
-      <figure class="hw-photo">
-        <img src="assets/conector-tipo2-mano.jpg" alt="Persona enchufando un conector Tipo 2 en la toma de carga de un auto eléctrico blanco" loading="lazy" width="1200" height="800">
-        <figcaption>Conector Tipo 2: el estándar de carga en corriente alterna.</figcaption>
+      <figure>
+        <div class="ph"><img src="assets/conector-tipo2-mano.jpg" alt="Persona enchufando un conector Tipo 2 en un auto eléctrico" loading="lazy" width="1200" height="800"></div>
+        <figcaption><b>Para todos los autos</b>Tipo 2, CCS2, CHAdeMO y Tipo 1.</figcaption>
       </figure>
-      <figure class="hw-prod">
-        <img src="assets/cargador-ac-pantalla-rfid-qr.png" alt="Cargador de pared Growatt con pantalla, lector RFID y código QR" loading="lazy" width="242" height="466">
-        <figcaption>
-          <b>Cargador AC con pantalla, RFID y QR</b>
-          <span>Mide energía, habla OCPP y se monta en pared o pedestal.</span>
-        </figcaption>
+      <figure>
+        <div class="ph"><img src="assets/cargador-pistola-cochera.jpg" alt="Pistola de carga guardada en su cargador dentro de una cochera" loading="lazy" width="800" height="1200"></div>
+        <figcaption><b>Lugar siempre libre</b>Pagan por kWh y, si se pasan, por ocupación.</figcaption>
       </figure>
     </div>
-    <div class="compat">
-      <div><b>Conectores</b><p class="chips"><span>Tipo 2 · AC 7–22 kW</span><span>CCS2 · DC 30–180 kW</span><span>CHAdeMO · DC</span><span>Tipo 1 · con adaptador</span></p></div>
-      <div><b>Marcas que ya cargan</b><p class="chips"><span>BYD</span><span>Renault</span><span>BMW</span><span>Peugeot</span><span>Fiat</span><span>Volvo</span><span>Audi</span><span>Porsche</span><span>Mercedes-EQ</span><span>Chevrolet</span><span>JAC</span><span>Nissan</span></p></div>
-      <div><b>Protocolos</b><p class="chips"><span>OCPP 1.6J / 2.0.1</span><span>ISO 15118</span><span>RFID</span><span>QR</span></p></div>
-    </div>
-    <p class="small">Cargadores abiertos por OCPP: no quedás atado a una sola plataforma. Confirmamos la compatibilidad de modelos puntuales antes de cotizar.</p>
+    <ul class="checks">
+      <li>Sin pasarte de tu potencia contratada</li>
+      <li>Cobro por QR, tarjeta o RFID</li>
+      <li>Monitoreo 24/7</li>
+      <li>Toda la Argentina</li>
+    </ul>
   </div>
 </section>
 
 <!-- PACKS -->
 <section class="cream" id="packs">
   <div class="wrap">
-    <div class="sec-head">
-      <p class="eyebrow dk">06 · Packs cerrados</p>
-      <h2>Elegís un pack. Nosotros resolvemos todo lo demás.</h2>
-      <p class="sub">Cuatro configuraciones estándar, con o sin solar y con o sin carport. Siempre ampliables.</p>
-    </div>
-
+    <h2>Elegí tu pack.</h2>
     <div class="packs">
       <article class="pack">
-        <header><span class="tag">Entrada</span><h3>Pack Start</h3><p>Empezá a cobrar carga con poca inversión.</p></header>
-        <ul>
-          <li>2 cargadores AC Tipo 2 de 7,4 u 11 kW</li>
-          <li>Gestión de potencia y cobro por QR y tarjeta</li>
-          <li>Panel del propietario, señalética y puesta en marcha</li>
-        </ul>
-        <div class="price"><small>Referencia desde</small><b>USD 5.500</b><small>+ IVA · instalado</small></div>
-        <p class="ideal">Restaurantes, cafés, hoteles chicos, oficinas.</p>
-        <a class="btn btn-sm" href="#contacto" data-pack="Pack Start">Cotizar este pack</a>
+        <h3>Solo cargadores</h3>
+        <p>2 cargadores con cobro por QR. Para empezar.</p>
+        <div class="price"><small>desde</small><b>USD 5.500</b></div>
+        <a class="btn btn-sm" data-wa data-pack="Solo cargadores" href="#contacto">Cotizar</a>
       </article>
-
-      <article class="pack">
-        <header><span class="tag">Más elegido</span><h3>Pack Solar</h3><p>La carga la paga el sol: bajás tu costo por kWh.</p></header>
-        <ul>
-          <li>2 a 4 cargadores AC de 11 a 22 kW</li>
-          <li>10 a 30 kWp de paneles en techo o estructura</li>
-          <li>Inversor, protecciones y gestor de carga</li>
-        </ul>
-        <div class="price"><small>Referencia desde</small><b>USD 24.000</b><small>+ IVA · instalado</small></div>
-        <p class="ideal">Supermercados, hoteles, cocheras, empresas.</p>
-        <a class="btn btn-sm" href="#contacto" data-pack="Pack Solar">Cotizar este pack</a>
-      </article>
-
       <article class="pack hl">
-        <header><span class="tag">Marca el lugar</span><h3>Pack Carport Solar</h3><p>Sombra para el cliente, energía para el negocio.</p></header>
-        <ul>
-          <li>Carport de 4 a 12 plazas con módulos bifaciales</li>
-          <li>20 a 60 kWp y 2 a 6 cargadores AC de 22 kW</li>
-          <li>Iluminación y cableado ordenado en la estructura</li>
-        </ul>
-        <div class="price"><small>Referencia desde</small><b>USD 68.000</b><small>+ IVA · instalado</small></div>
-        <p class="ideal">Parques industriales, shoppings, hoteles, clubes.</p>
-        <a class="btn btn-sm" href="#contacto" data-pack="Pack Carport Solar">Cotizar este pack</a>
+        <span class="tag">Más elegido</span>
+        <h3>Cargadores + solar</h3>
+        <p>Cargadores y paneles en tu techo. Ahorrás desde el primer día.</p>
+        <div class="price"><small>desde</small><b>USD 24.000</b></div>
+        <a class="btn btn-sm" data-wa data-pack="Cargadores + solar" href="#contacto">Cotizar</a>
       </article>
-
       <article class="pack">
-        <header><span class="tag">Alta potencia</span><h3>Pack Hub DC</h3><p>Carga rápida para paso y rutas.</p></header>
-        <ul>
-          <li>1 a 4 cargadores DC de 60 a 180 kW (CCS2)</li>
-          <li>Solar y batería de respaldo opcionales</li>
-          <li>Obra civil, tablero y señalización vial</li>
-        </ul>
-        <div class="price"><small>Referencia desde</small><b>USD 180.000</b><small>+ IVA · instalado</small></div>
-        <p class="ideal">Estaciones de servicio, corredores, paradores.</p>
-        <a class="btn btn-sm" href="#contacto" data-pack="Pack Hub DC">Cotizar este pack</a>
+        <h3>Carport solar</h3>
+        <p>Estacionamiento techado con paneles y cargadores. Marca tu lugar.</p>
+        <div class="price"><small>desde</small><b>USD 68.000</b></div>
+        <a class="btn btn-sm" data-wa data-pack="Carport solar" href="#contacto">Cotizar</a>
       </article>
     </div>
-
-    <p class="models"><b>Tres formas de arrancar:</b> <span>Compra</span> <span>Leasing o renting</span> <span>Inversión cero: instalamos y operamos, y compartimos los ingresos</span></p>
-    <p class="note dk">Valores de referencia: el precio final depende de la potencia disponible, la distancia al tablero, la obra civil y la provincia. Todos los packs se cotizan con relevamiento previo.</p>
-  </div>
-</section>
-
-<!-- NEGOCIO -->
-<section class="dark" id="negocio">
-  <div class="wrap">
-    <div class="sec-head">
-      <p class="eyebrow">07 · Rentabilidad</p>
-      <h2>Hacé la cuenta: cuánto ganás, cuánto ahorrás y cuántos clientes nuevos sumás.</h2>
-    </div>
-    <div class="roi">
-      <form class="roi-in" onsubmit="return false">
-        <label>Pack
-          <select id="rPack">
-            <option value="5500">Pack Start · USD 5.500</option>
-            <option value="24000" selected>Pack Solar · USD 24.000</option>
-            <option value="68000">Pack Carport Solar · USD 68.000</option>
-            <option value="180000">Pack Hub DC · USD 180.000</option>
-            <option value="custom">Otro monto…</option>
-          </select>
-        </label>
-        <label id="rCustomWrap" hidden>Inversión (USD)<input id="rCustom" type="number" min="0" step="500" value="30000"></label>
-        <label>Sesiones de carga por día <output id="oSes"></output><input id="rSes" type="range" min="1" max="60" value="8"></label>
-        <label>kWh por sesión <output id="oKwh"></output><input id="rKwh" type="range" min="5" max="60" value="18"></label>
-        <label>Precio de venta (USD por kWh) <output id="oPrice"></output><input id="rPrice" type="range" min="0.10" max="0.80" step="0.01" value="0.30"></label>
-        <label>Parte cubierta por solar <output id="oSolarPct"></output><input id="rSolar" type="range" min="0" max="100" step="5" value="40"></label>
-        <details class="adv">
-          <summary>Ajustes avanzados</summary>
-          <label>Costo de la energía de red (USD por kWh) <output id="oGrid"></output><input id="rGrid" type="range" min="0.03" max="0.30" step="0.01" value="0.11"></label>
-          <label>Comisión de cobro y plataforma <output id="oFee"></output><input id="rFee" type="range" min="0" max="12" step="0.5" value="5"></label>
-          <label>Cargas que consumen en tu local <output id="oConv"></output><input id="rConv" type="range" min="0" max="100" step="5" value="60"></label>
-          <label>Ticket promedio en tu local (USD) <output id="oTicket"></output><input id="rTicket" type="range" min="0" max="150" step="1" value="15"></label>
-        </details>
-      </form>
-      <div class="roi-out" id="roiOut" aria-live="polite"></div>
-    </div>
-    <p class="note">Estimación ilustrativa con los supuestos que cargues; no es una promesa de rendimiento. No incluye impuestos ni mantenimiento.</p>
-  </div>
-</section>
-
-<!-- OBRAS -->
-<section class="light obras" id="obras">
-  <div class="wrap">
-    <div class="sec-head">
-      <p class="eyebrow dk">08 · Instalaciones reales</p>
-      <h2>Así se ve un sistema funcionando.</h2>
-    </div>
-    <div class="gallery">
-      <figure><img src="assets/carport-cargadores-inversor.jpg" alt="Carport solar con cargadores e inversor" loading="lazy" width="900" height="1600"><figcaption>Carport, inversor y tablero</figcaption></figure>
-      <figure><img src="assets/cargadores-estacionamiento-exclusivo.jpg" alt="Dos cargadores de pared bajo un techito con cartel de estacionamiento exclusivo para vehículos eléctricos" loading="lazy" width="900" height="1600"><figcaption>Cartel de uso exclusivo</figcaption></figure>
-      <figure><img src="assets/carport-modulos-bifaciales.jpg" alt="Vista desde abajo de los módulos bifaciales del carport" loading="lazy" width="900" height="1600"><figcaption>Módulos bifaciales</figcaption></figure>
-      <figure><img src="assets/auto-cargando-bajo-carport.jpg" alt="Auto eléctrico cargando bajo el carport solar" loading="lazy" width="900" height="1600"><figcaption>El cliente carga y consume</figcaption></figure>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section class="white" id="faq">
-  <div class="wrap narrow">
-    <div class="sec-head">
-      <p class="eyebrow dk">09 · Preguntas frecuentes</p>
-      <h2>Lo que nos preguntan antes de arrancar.</h2>
-    </div>
-    <details class="qa" open><summary>¿Mi conexión eléctrica alcanza para varios cargadores?</summary><p>Casi siempre sí, sin ampliar la potencia contratada. El gestor mide tu consumo en tiempo real y reparte la potencia disponible entre los autos.</p></details>
-    <details class="qa"><summary>¿Cómo se me liquida lo que cobro?</summary><p>La plataforma te muestra cada sesión: kWh, monto, comisión y neto. La liquidación puede ser diaria, semanal o mensual a la cuenta que indiques.</p></details>
-    <details class="qa"><summary>¿Necesito una habilitación o trámite?</summary><p>Hacemos el proyecto eléctrico y gestionamos con la distribuidora lo que corresponda, incluida la generación distribuida si los paneles se conectan a la red.</p></details>
-    <details class="qa"><summary>¿Cuánto tarda y puedo ampliar después?</summary><p>Un Pack Start puede quedar funcionando en pocos días; con solar o carport, entre 3 y 8 semanas. La infraestructura queda preparada para sumar cargadores y paneles sin rehacer la obra.</p></details>
+    <p class="small">Valores de referencia + IVA, instalado. Comprás, financiás en leasing o sin inversión: instalamos y compartimos ingresos. ¿Estación de servicio con carga rápida? Consultanos.</p>
   </div>
 </section>
 
 <!-- CONTACTO -->
 <section class="dark contact" id="contacto">
   <div class="wrap contact-grid">
+    <figure class="contact-photo">
+      <img src="assets/cargadores-estacionamiento-exclusivo.jpg" alt="Dos cargadores de pared con cartel de estacionamiento exclusivo para vehículos eléctricos" loading="lazy" width="900" height="1600">
+    </figure>
     <div>
-      <p class="eyebrow">10 · Hablemos</p>
-      <h2>Contanos tu lugar y te armamos el pack.</h2>
-      <p class="lead">Con tu rubro, tu ciudad y tu potencia contratada preparamos una propuesta con equipos, producción solar y números de rentabilidad.</p>
-      <ul class="ticks lite">
-        <li>Propuesta con 2 o 3 alternativas: con y sin solar, con y sin carport.</li>
-        <li>Compra, leasing o inversión cero.</li>
-        <li>Instalamos en toda la Argentina.</li>
-      </ul>
-      <a class="btn btn-wa" data-wa href="#contacto">Escribinos por WhatsApp</a>
+      <h2>Contanos tu lugar.</h2>
+      <p class="lead">Te respondemos con una propuesta a medida.</p>
+      <form class="form" id="contactForm" novalidate>
+        <label>Nombre<input name="nombre" required autocomplete="name"></label>
+        <label>Empresa<input name="empresa" autocomplete="organization"></label>
+        <div class="two">
+          <label>Rubro
+            <select name="rubro" id="fRubro">
+              <option>Hotel</option><option>Restaurante / comida rápida</option><option>Tienda</option><option>Shopping</option><option>Supermercado</option><option>Parque industrial</option><option>Oficinas</option><option>Estación de servicio / cochera</option><option>Otro</option>
+            </select>
+          </label>
+          <label>Ciudad<input name="ciudad" placeholder="Ej.: Pilar"></label>
+        </div>
+        <input type="hidden" name="pack" id="fPack" value="Todavía no sé">
+        <button class="btn btn-wa" type="submit">Enviar por WhatsApp</button>
+        <p class="small" id="formMsg" role="status"></p>
+      </form>
     </div>
-    <form class="form" id="contactForm" novalidate>
-      <label>Nombre<input name="nombre" required autocomplete="name"></label>
-      <label>Empresa o lugar<input name="empresa" autocomplete="organization"></label>
-      <div class="two">
-        <label>Rubro
-          <select name="rubro">
-            <option>Hotel</option><option>Restaurante / café</option><option>Supermercado / shopping</option><option>Cochera / edificio / country</option><option>Parque industrial / empresa</option><option>Estación de servicio</option><option>Otro</option>
-          </select>
-        </label>
-        <label>Ciudad y provincia<input name="ciudad" placeholder="Ej.: Pilar, Buenos Aires"></label>
-      </div>
-      <div class="two">
-        <label>Pack de interés
-          <select name="pack" id="fPack">
-            <option>Todavía no sé</option><option>Pack Start</option><option>Pack Solar</option><option>Pack Carport Solar</option><option>Pack Hub DC</option>
-          </select>
-        </label>
-        <label>Potencia contratada (kW)<input name="kw" inputmode="numeric" placeholder="Si la sabés"></label>
-      </div>
-      <label>Comentarios<textarea name="msg" rows="3" placeholder="Cantidad de plazas, si querés carport, etc."></textarea></label>
-      <button class="btn" type="submit">Enviar consulta por WhatsApp</button>
-      <p class="small" id="formMsg" role="status">Se abrirá WhatsApp con tu consulta ya escrita.</p>
-    </form>
   </div>
 </section>
 
@@ -486,18 +192,16 @@
 
 <footer class="foot">
   <div class="wrap foot-in">
-    <div class="brand foot-brand"><img src="assets/logo.png" alt="" width="30" height="30"><span><b>NODEX</b><i>Charging Solutions</i></span></div>
-    <p>Ingeniería, instalación y operación de cargadores de autos eléctricos con energía solar. Toda la Argentina.</p>
-    <p class="small"><a href="https://nodexsolar.com.ar" target="_blank" rel="noopener">nodexsolar.com.ar</a> · Los valores, tarifas y ejemplos de esta página son de referencia y no constituyen una oferta formal.</p>
+    <div class="brand"><img src="assets/logo.png" alt="" width="28" height="28"><span><b>NODEX</b><i>Charging Solutions</i></span></div>
+    <p class="small">Valores y ejemplos de referencia, no constituyen una oferta formal.</p>
   </div>
 </footer>
 
-<a class="wa-float" id="waFloat" data-wa href="#contacto" aria-label="Consultar por WhatsApp" target="_blank" rel="noopener">
+<a class="wa-float" id="waFloat" data-wa href="#contacto" aria-label="Consultar por WhatsApp">
   <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true"><path fill="currentColor" d="M16.04 3C9.4 3 4 8.36 4 14.97c0 2.12.56 4.18 1.62 6L4 29l8.2-2.1a12.1 12.1 0 0 0 3.84.62C22.68 27.52 28 22.16 28 15.55 28 9 22.68 3 16.04 3Zm0 22.4c-1.2 0-2.38-.3-3.42-.9l-.5-.28-4.86 1.24 1.3-4.7-.32-.5a9.4 9.4 0 0 1-1.46-5c0-5.2 4.3-9.4 9.6-9.4 5.2 0 9.4 4.4 9.4 9.6 0 5.12-4.28 9.94-9.74 9.94Zm5.5-7.04c-.3-.16-1.78-.88-2.06-.98-.28-.1-.48-.16-.68.16-.2.3-.78.98-.96 1.18-.18.2-.36.22-.66.08-.3-.16-1.28-.48-2.44-1.5a9.2 9.2 0 0 1-1.7-2.1c-.18-.3 0-.46.14-.62.14-.14.3-.36.46-.54.16-.18.2-.3.3-.5.1-.2.06-.38-.02-.54-.08-.16-.68-1.64-.94-2.24-.24-.58-.5-.5-.68-.5h-.58c-.2 0-.54.08-.82.38-.28.3-1.08 1.06-1.08 2.58 0 1.52 1.1 3 1.26 3.2.16.2 2.18 3.3 5.28 4.64.74.32 1.3.5 1.76.64.74.24 1.4.2 1.94.12.6-.08 1.78-.72 2.04-1.42.26-.7.26-1.3.18-1.42-.08-.12-.28-.2-.58-.36Z"/></svg>
   <span>Consultanos</span>
 </a>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer></script>
 <script src="js/main.js" defer></script>
 </body>
 </html>
