@@ -1,0 +1,33 @@
+# Nodex Solar Mobility
+
+> Instalación de cargadores para autos eléctricos y carport solar para empresas con estacionamiento de clientes en Argentina. Unidad de Nodex Solar (https://nodexsolar.com.ar).
+
+Sitio: https://mobility.nodexsolar.com.ar/
+
+## Qué hacemos
+- Diseñamos, instalamos y operamos cargadores para autos eléctricos y carport solar (estacionamiento techado con paneles solares) para empresas.
+- Cobro al usuario por la energía usada (kWh) o por tiempo, con QR de Mercado Pago, tarjeta o RFID, con pago anticipado.
+- Gestión dinámica de potencia para no superar la potencia contratada.
+- Conectores más usados en Argentina: Tipo 2 (corriente alterna) y CCS2 (carga rápida); también CHAdeMO y Tipo 1. Cargadores abiertos (OCPP) con monitoreo remoto.
+
+## Para quién
+Hoteles, restaurantes y comida rápida, tiendas, shoppings, supermercados, oficinas, parques industriales, cocheras y estaciones de servicio.
+
+## Beneficios para la empresa
+- Ingresos por la venta de energía.
+- Ahorro con generación solar propia.
+- Más clientes y fidelidad: quien carga su auto permanece más tiempo en el local.
+
+## Packs
+- Solo cargadores: cargadores con cobro por QR.
+- Cargadores + solar: cargadores y paneles solares en techo.
+- Carport solar: estacionamiento techado con paneles solares y cargadores.
+Modalidades: compra, leasing o instalación sin inversión inicial con reparto de ingresos. Cotización a medida.
+
+## Cobertura
+Buenos Aires y toda la Argentina.
+
+## Contacto
+WhatsApp: +54 9 11 7643-8672
+Página: https://mobility.nodexsolar.com.ar/
+Política de privacidad: https://mobility.nodexsolar.com.ar/privacidad.html
