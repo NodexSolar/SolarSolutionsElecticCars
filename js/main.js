@@ -1,4 +1,4 @@
-/* Nodex E-Mobility — interacciones */
+/* Nodex Solar Mobility — interacciones */
 (() => {
 'use strict';
 
@@ -41,7 +41,7 @@ $$('[data-pack]').forEach(a => a.addEventListener('click', () => {
 /* WhatsApp: botón flotante y botones "Cotizar" */
 function waUrl() {
   const lines = [
-    'Hola Nodex E-Mobility! Vi su página de cargadores para autos eléctricos y carport solar.',
+    'Hola Nodex Solar Mobility! Vi su página de cargadores para autos eléctricos y carport solar.',
     'Tengo un estacionamiento y quiero sumar cargadores para generar ingresos cobrando la energía, ahorrar y consolidar a mis clientes.',
     rubro && `Mi rubro: ${rubro}.`,
     pack && `Me interesa: ${pack}.`,
@@ -64,7 +64,7 @@ $('#contactForm').addEventListener('submit', e => {
   const msg = $('#formMsg');
   if (!v('nombre')) { msg.textContent = 'Escribí tu nombre para poder responderte.'; f.elements.nombre.focus(); return; }
   const lines = [
-    'Hola Nodex E-Mobility! Quiero cotizar cargadores para autos eléctricos y carport solar.',
+    'Hola Nodex Solar Mobility! Quiero cotizar cargadores para autos eléctricos y carport solar.',
     `Nombre: ${v('nombre')}`,
     v('empresa') && `Empresa: ${v('empresa')}`,
     `Rubro: ${v('rubro')}`,

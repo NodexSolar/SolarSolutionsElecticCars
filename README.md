@@ -1,4 +1,4 @@
-# Nodex E-Mobility
+# Nodex Solar Mobility
 
 Página estática (HTML + CSS + JS, sin build) para ofrecer cargadores de autos eléctricos y carport solar a empresas con estacionamiento: hoteles, restaurantes, tiendas, shoppings, supermercados, parques industriales y oficinas.
 
@@ -20,5 +20,14 @@ python -m http.server 3100
 ```
 y abrir http://localhost:3100.
 
-## Publicación
-GitHub Pages desde la rama `main`, carpeta raíz.
+## Publicación con Cloudflare Pages
+El sitio es estático: no necesita build.
+
+1. Cloudflare → **Workers & Pages** → **Create** → **Pages** → **Connect to Git**.
+2. Autorizar GitHub y elegir el repo `NodexSolar/SolarSolutionsElecticCars`, rama `main`.
+3. Framework preset: **None**. Build command: vacío. Build output directory: `/` (o vacío).
+4. **Save and Deploy**. Desde ahí, cada `git push` a `main` publica solo.
+5. En el proyecto: **Custom domains** → **Set up a custom domain** → escribir el dominio.
+
+Archivos pensados para Cloudflare: [`_headers`](_headers) (caché y seguridad), [`404.html`](404.html) y [`robots.txt`](robots.txt).
+Cuando haya dominio definitivo conviene agregar `<link rel="canonical">` y un `sitemap.xml`.

@@ -1,4 +1,4 @@
-/* Nodex E-Mobility — estilos */
+/* Nodex Solar Mobility — estilos */
 :root{
   --sol:#C8881A; --sol-lt:#E8A835; --sol-vivid:#EF9F27; --sol-pale:#FDF3E0;
   --forest:#0F1F10; --forest2:#152815; --forest3:#1E3720;
@@ -175,3 +175,19 @@ section.wide{padding:56px 0 64px;background:#fff}
   .wide-photo{aspect-ratio:4/3}
 }
 @media (max-width:560px){.three{grid-template-columns:1fr 1fr;gap:22px}.three p{font-size:15px}}
+
+/* hero: diagrama de 3 pasos */
+.hero h1{font-size:clamp(38px,4.9vw,68px);margin-bottom:6px}
+.flow3{list-style:none;position:relative;margin:30px 0 0;display:grid;gap:18px}
+.flow3::before{content:"";position:absolute;left:19px;top:22px;bottom:22px;border-left:2px dashed rgba(239,159,39,.5)}
+.flow3 li{position:relative;display:flex;align-items:flex-start;gap:16px}
+.flow3 b{flex:none;width:40px;height:40px;border-radius:50%;background:var(--sol-vivid);color:#1A1204;display:grid;place-items:center;font:500 17px var(--mono);box-shadow:0 0 0 6px var(--forest)}
+.flow3 span{display:block;font-size:15.5px;opacity:.85;padding-top:1px;line-height:1.4}
+.flow3 strong{display:block;font-family:var(--serif);font-weight:400;font-size:25px;line-height:1.1;color:#fff;opacity:1}
+.hero .cta-row{margin-top:30px}
+.pin{position:absolute;translate:-50% -50%;width:38px;height:38px;border-radius:50%;background:var(--sol-vivid);color:#1A1204;display:grid;place-items:center;font:500 16px var(--mono);box-shadow:0 0 0 5px rgba(239,159,39,.35),0 8px 20px rgba(0,0,0,.45)}
+.pin-qr{background:#25D366;box-shadow:0 0 0 5px rgba(37,211,102,.35),0 8px 20px rgba(0,0,0,.45)}
+@media (max-width:560px){
+  .flow3 strong{font-size:22px}
+  .pin{width:32px;height:32px;font-size:14px}
+}
