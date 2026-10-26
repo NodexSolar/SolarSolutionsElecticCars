@@ -30,4 +30,4 @@ El sitio es estático: no necesita build.
 5. En el proyecto: **Custom domains** → **Set up a custom domain** → escribir el dominio.
 
 Archivos pensados para Cloudflare: [`_headers`](_headers) (caché y seguridad), [`404.html`](404.html) y [`robots.txt`](robots.txt).
-Cuando haya dominio definitivo conviene agregar `<link rel="canonical">` y un `sitemap.xml`.
+Dominio actual: https://mobility.nodexsolar.com.ar (Worker con assets estáticos `solarsolutionselecticcars`, dominio personalizado sobre la zona `nodexsolar.com.ar`). Ya incluye `canonical`, `sitemap.xml` y `robots.txt` con ese dominio.

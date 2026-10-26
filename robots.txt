@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://mobility.nodexsolar.com.ar/sitemap.xml
