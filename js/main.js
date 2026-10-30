@@ -99,9 +99,6 @@ $$('[data-wa]').forEach(a => {
   a.href = waLink(); a.target = '_blank'; a.rel = 'noopener';
   a.addEventListener('click', () => track('whatsapp_click', { link_location: a.id || a.dataset.pack || a.textContent.trim().slice(0, 30) }));
 });
-const waFloat = $('#waFloat');
-const showWa = () => waFloat.classList.toggle('show', scrollY > 500);
-addEventListener('scroll', showWa, { passive: true }); showWa();
 
 /* formulario → WhatsApp */
 $('#contactForm').addEventListener('submit', e => {

@@ -223,3 +223,24 @@ section.wide{padding:56px 0 64px;background:#fff}
 .legal a,.foot a,.small a{color:var(--sol)}
 .foot .small{max-width:70ch}
 @media (max-width:900px){.map{height:420px}.legend{margin-left:0}.sub{margin-top:-8px}}
+
+/* v6: móvil — fotos sin tapar, portada con foto visible, WhatsApp siempre */
+.wa-float{transform:none;opacity:1}
+.steps article{display:grid;grid-template-columns:auto 1fr;column-gap:14px;align-items:start}
+.steps .ph{grid-column:1/-1}
+.steps .n{position:static;box-shadow:none;margin-top:16px;grid-row:2;width:36px;height:36px;font-size:16px}
+.steps h3{grid-column:2;grid-row:2;margin:16px 0 4px}
+.steps p{grid-column:2;grid-row:3}
+@media (max-width:900px){
+  .hero-grid{gap:18px}
+  .hero-grid>div{display:contents}
+  .hero .eyebrow{order:1;margin-bottom:0}
+  .hero h1{order:2;margin-bottom:0}
+  .hero-photo{order:3;aspect-ratio:1/1}
+  .hero .flow3{order:4;margin-top:6px}
+  .hero .cta-row{order:5;margin-top:4px}
+  .hero-photo .pin,.hero-photo .chip{display:none}
+  .steps .ph,.feat .ph{aspect-ratio:4/5}
+  .contact-photo{aspect-ratio:1/1}
+  .wide-photo{aspect-ratio:3/2}
+}
